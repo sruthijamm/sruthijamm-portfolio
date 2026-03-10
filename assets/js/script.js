@@ -1,11 +1,7 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
@@ -13,8 +9,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -35,25 +29,18 @@ const testimonialsModalFunc = function () {
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function () {
-
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
     testimonialsModalFunc();
-
   });
-
 }
 
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
-
-
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -66,12 +53,10 @@ select.addEventListener("click", function () { elementToggleFunc(this); });
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
-
   });
 }
 
@@ -79,9 +64,7 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -89,31 +72,22 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
-
   filterBtn[i].addEventListener("click", function () {
-
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
-
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
-
   });
-
 }
-
-
 
 // contact form variables
 const form = document.querySelector("[data-form]");
@@ -123,41 +97,68 @@ const formBtn = document.querySelector("[data-form-btn]");
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
 }
 
+// =========================
+// Hash-based page navigation
+// =========================
 
-
-// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Valid page names
+const validPages = ["about", "resume", "projects", "blogs", "contact"];
+
+function activatePage(targetPage) {
+  // Normalise: strip leading #
+  const page = targetPage.replace(/^#/, "").toLowerCase().trim();
+  const resolved = validPages.includes(page) ? page : "about";
+
+  for (let j = 0; j < pages.length; j++) {
+    if (resolved === pages[j].dataset.page) {
+      pages[j].classList.add("active");
+    } else {
+      pages[j].classList.remove("active");
+    }
+  }
+
+  for (let k = 0; k < navigationLinks.length; k++) {
+    const linkPage = navigationLinks[k].dataset.navLink || navigationLinks[k].innerText.trim().toLowerCase();
+    if (resolved === linkPage) {
+      navigationLinks[k].classList.add("active");
+    } else {
+      navigationLinks[k].classList.remove("active");
+    }
+  }
+
+  window.scrollTo(0, 0);
+}
+
+// Handle nav link clicks — update hash instead of just toggling classes
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
     const targetPage = this.innerText.trim().toLowerCase();
-
-    for (let j = 0; j < pages.length; j++) {
-      if (targetPage === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        navigationLinks[j].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        navigationLinks[j].classList.remove("active");
-      }
-    }
-
+    // Update URL hash (triggers hashchange, which calls activatePage)
+    window.location.hash = targetPage;
   });
 }
+
+// Listen for hash changes (back/forward, direct links)
+window.addEventListener("hashchange", function () {
+  activatePage(window.location.hash);
+});
+
+// On initial load, read hash from URL (or default to "about")
+(function () {
+  const initialHash = window.location.hash || "#about";
+  activatePage(initialHash);
+})();
 
 // =========================
 // Formspree submit (no redirect)
@@ -167,16 +168,14 @@ const formStatus = document.getElementById("form-status");
 
 if (contactForm) {
   contactForm.addEventListener("submit", async function (event) {
-    event.preventDefault(); // prevent redirect
+    event.preventDefault();
 
-    // Don't submit if invalid (extra safety)
     if (!contactForm.checkValidity()) {
       formStatus.textContent = "Please fill out all required fields.";
       contactForm.reportValidity();
       return;
     }
 
-    // UI: disable button + show sending state
     const originalBtnText = formBtn?.querySelector("span")?.textContent || "Send Message";
     formBtn?.setAttribute("disabled", "");
     if (formBtn?.querySelector("span")) formBtn.querySelector("span").textContent = "Sending...";
@@ -191,18 +190,15 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        formStatus.textContent = "✅ Message sent! I’ll get back to you soon.";
+        formStatus.textContent = "✅ Message sent! I'll get back to you soon.";
         contactForm.reset();
-        // reset disabled state since inputs are empty now
         formBtn?.setAttribute("disabled", "");
       } else {
         formStatus.textContent = "❌ Something went wrong. Please try again.";
-        // allow retry
         formBtn?.removeAttribute("disabled");
       }
     } catch (err) {
       formStatus.textContent = "❌ Network error. Please try again.";
-      // allow retry
       formBtn?.removeAttribute("disabled");
     } finally {
       if (formBtn?.querySelector("span")) formBtn.querySelector("span").textContent = originalBtnText;
