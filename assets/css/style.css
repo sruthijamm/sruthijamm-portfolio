@@ -1952,7 +1952,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .cert-link ion-icon { font-size: 12px; }
 
-@media (min-width: 580px) {
+@media (min-width: 768px) {
   .cert-grid { grid-template-columns: 1fr 1fr; }
 }
   /**
