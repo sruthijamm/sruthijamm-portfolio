@@ -2154,3 +2154,33 @@ textarea.form-input::-webkit-resizer { display: none; }
     grid-column: 1 / -1;
   }
 }
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  color: var(--vegas-gold);
+  text-decoration: none;
+  transition: color var(--transition-1);
+  margin-top: 4px;
+}
+
+.cert-link ion-icon {
+  display: inline !important;
+  font-size: 12px;
+}
+
+.cert-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-card-top ion-icon {
+  display: inline !important;
+}
+
+.cert-issuer {
+  display: inline !important;
+}
