@@ -2070,6 +2070,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   gap: 16px;
 }
 
+@media (min-width: 768px) {
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+}
+
 .cert-card {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -2165,6 +2169,3 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .cert-link:hover { color: var(--orange-yellow-crayola); }
-
-@media (min-width: 768px) {
-}
