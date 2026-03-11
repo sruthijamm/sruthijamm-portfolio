@@ -924,179 +924,81 @@ Currently, I’m working to transition into a Data Scientist and AI Engineer rol
 
         <section class="blog-posts">
 
-          <ul class="blog-posts-list">
+          <section class="blog-posts">
 
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Reflective</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Technical</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>AI & Data Science</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Misc</button>
+              </li>
+            </ul>
+          
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+              </button>
+              <ul class="select-list">
+                <li class="select-item"><button data-select-item>All</button></li>
+                <li class="select-item"><button data-select-item>Reflective</button></li>
+                <li class="select-item"><button data-select-item>Technical</button></li>
+                <li class="select-item"><button data-select-item>AI & Data Science</button></li>
+                <li class="select-item"><button data-select-item>Misc</button></li>
+              </ul>
+            </div>
+          
+            <ul class="blog-posts-list">
+          
+              <li class="blog-post-item active" data-filter-item data-category="reflective">
+                <a href="https://medium.com/@sruthijam/starting-over-60269e3a87c9">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/images/Startingover.png" alt="Starting Over" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Reflective</p>
+                      <span class="dot"></span>
+                      <time datetime="2026-02-09">Feb 09, 2026</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Starting Over.</h3>
+                    <p class="blog-text">A personal reset to write, learn, and share my evolving interests across AI, books, health, and creativity.</p>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                </a>
+              </li>
+          
+              <li class="blog-post-item active" data-filter-item data-category="reflective">
+                <a href="https://medium.com/@sruthijam/5-things-i-learned-during-covid-af1c5303b5e4">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/images/COVID.png" alt="5 Things I learned During COVID" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Reflective</p>
+                      <span class="dot"></span>
+                      <time datetime="2022-01-08">Jan 8, 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">5 Things I learned During COVID</h3>
+                    <p class="blog-text">How the pandemic reshaped my perspective on relationships, growth, adaptability, and focusing on the journey over the outcome.</p>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@sruthijam/starting-over-60269e3a87c9">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/Startingover.png" alt="Starting Over" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Reflective</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2026-02-09">Feb 09, 2026</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Starting Over.</h3>
-
-                  <p class="blog-text">
-                    A personal reset to write, learn, and share my evolving interests across AI, books, health, and creativity.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@sruthijam/5-things-i-learned-during-covid-af1c5303b5e4">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/COVID.png" alt="5 Things I learned During COVID" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Reflective</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-01-08">Jan 8, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">5 Things I learned During COVID</h3>
-
-                  <p class="blog-text">
-                    How the pandemic reshaped my perspective on relationships, growth, adaptability, and focusing on the journey over the outcome.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
+                </a>
+              </li>
+          
+            </ul>
+          
+          </section>
 
       </article>
 
