@@ -1883,9 +1883,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 .cert-icon {
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 10px;
   background: var(--border-gradient-onyx);
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   color: var(--orange-yellow-crayola);
@@ -1893,6 +1895,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   flex-shrink: 0;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.cert-icon ion-icon {
+  font-size: 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
 }
 
 .cert-icon::before {
