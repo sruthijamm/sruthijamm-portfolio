@@ -102,15 +102,15 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        if (formStatus) formStatus.textContent = "✅ Message sent! I'll get back to you soon.";
+        if (formStatus) formStatus.textContent = "Message sent! I'll get back to you soon.";
         contactForm.reset();
         formBtn?.setAttribute("disabled", "");
       } else {
-        if (formStatus) formStatus.textContent = "❌ Something went wrong. Please try again.";
+        if (formStatus) formStatus.textContent = "Something went wrong. Please try again.";
         formBtn?.removeAttribute("disabled");
       }
     } catch (err) {
-      if (formStatus) formStatus.textContent = "❌ Network error. Please try again.";
+      if (formStatus) formStatus.textContent = "Network error. Please try again.";
       formBtn?.removeAttribute("disabled");
     } finally {
       if (formBtn?.querySelector("span")) formBtn.querySelector("span").textContent = originalBtnText;
