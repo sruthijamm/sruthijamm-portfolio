@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Sruthi Jammalamadaka</title>
+  <link rel="shortcut icon" href="./assets/images/sruthi_icon2.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/sruthi_icon2.png" alt="Sruthi Jammalamadaka" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Sruthi Jammalamadaka">Sruthi Jammalamadaka</h1>
+          <p class="title">Software Dev → AI & Data Science</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:sruthijamm@gmail.com" class="contact-link">sruthijamm@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="document"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+              <a href="assets/SruthiJammResume.pdf" class="resume-link" target="_blank">Download My Resume</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Years of Experience</p>
+              <time>2+ Years</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Toronto, Ontario, CA</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/sruthijamm" class="social-link"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/sruthijamm/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="resume.html" class="navbar-link">Resume</a></li>
+          <li class="navbar-item"><a href="projects.html" class="navbar-link active">Projects</a></li>
+          <li class="navbar-item"><a href="blog.html" class="navbar-link">Blogs</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <article class="portfolio active" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>AI Engineering</button></li>
+            <li class="filter-item"><button data-filter-btn>Data Science</button></li>
+            <li class="filter-item"><button data-filter-btn>Full Stack</button></li>
+            <li class="filter-item"><button data-filter-btn>Software Engineering</button></li>
+            <li class="filter-item"><button data-filter-btn>Fun</button></li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>AI Engineering</button></li>
+              <li class="select-item"><button data-select-item>Data Science</button></li>
+              <li class="select-item"><button data-select-item>Full Stack</button></li>
+              <li class="select-item"><button data-select-item>Software Engineering</button></li>
+              <li class="select-item"><button data-select-item>Fun</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="fun">
+              <div class="project-card">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/slot-machine.png" alt="Clover Slot Machine" loading="lazy" onerror="this.src='./assets/images/project-1.jpg'">
+                </figure>
+                <h3 class="project-title">Clover Slots</h3>
+                <p class="project-category">Fun</p>
+                <p class="project-desc">St. Patrick's Day themed slot machine built with animated reels, win detection, and festive UI.</p>
+                <div class="project-links">
+                  <a href="https://github.com/sruthijamm/lucky-clover-slots" target="_blank" rel="noopener" class="project-link-btn"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                  <a href="https://sruthijamm.github.io/lucky-clover-slots/" target="_blank" rel="noopener" class="project-link-btn demo-btn"><ion-icon name="open-outline"></ion-icon> Demo</a>
+                  <a href="https://sj-portfolio-projects.hashnode.dev/building-lucky-clover-st-patrick-s-day-slot-machine" target="_blank" rel="noopener" class="project-link-btn blog-btn"><ion-icon name="document-text-outline"></ion-icon> Blog</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="full stack">
+              <div class="project-card">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/swift-snip_v1.png" alt="Snippet Manager" loading="lazy" onerror="this.src='./assets/images/project-1.jpg'">
+                </figure>
+                <h3 class="project-title">Swift Snip</h3>
+                <p class="project-category">Full Stack</p>
+                <p class="project-desc">FastAPI-based snippet manager with real-time search, category filtering, and AI-assisted snippet generation.</p>
+                <div class="project-links">
+                  <a href="https://github.com/sruthijamm/snippet-manager" target="_blank" rel="noopener" class="project-link-btn"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                  <a href="https://swiftsnip.onrender.com/static/index.html" target="_blank" rel="noopener" class="project-link-btn demo-btn"><ion-icon name="open-outline"></ion-icon> Demo</a>
+                  <a href="https://sj-portfolio-projects.hashnode.dev/swiftsnip-from-idea-to-deployed-app" target="_blank" rel="noopener" class="project-link-btn blog-btn"><ion-icon name="document-text-outline"></ion-icon> Blog</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai engineering">
+              <div class="project-card">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/textmessage_v2.png" alt="Automated Text Messenger" loading="lazy" onerror="this.src='./assets/images/project-2.png'">
+                </figure>
+                <h3 class="project-title">Automated Text Messenger</h3>
+                <p class="project-category">Full Stack</p>
+                <p class="project-desc">AI-based SMS sender with personalization and tone detection using Claude API.</p>
+                <div class="project-links">
+                  <a href="https://github.com/sruthijamm/automated-text-messenger" target="_blank" rel="noopener" class="project-link-btn"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                  <a href="https://sj-portfolio-projects.hashnode.dev/from-script-to-smart-building-an-ai-powered-text-messenger" target="_blank" rel="noopener" class="project-link-btn blog-btn"><ion-icon name="document-text-outline"></ion-icon> Blog</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai engineering">
+              <div class="project-card">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/tictactoe_v1.png" alt="TicTacToe AI" loading="lazy" onerror="this.src='./assets/images/project-3.jpg'">
+                </figure>
+                <h3 class="project-title">TicTacToe AI</h3>
+                <p class="project-category">AI Engineering</p>
+                <p class="project-desc">Unbeatable minimax AI, live commentary generated by Claude, and move hints based on context.</p>
+                <div class="project-links">
+                  <a href="https://github.com/sruthijamm/tictactoe-ai" target="_blank" rel="noopener" class="project-link-btn"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                  <a href="https://tictactoe-ai-vs-you.onrender.com/" target="_blank" rel="noopener" class="project-link-btn demo-btn"><ion-icon name="open-outline"></ion-icon> Demo</a>
+                  <a href="https://sj-portfolio-projects.hashnode.dev/from-terminal-game-to-full-stack-ai-app-what-i-learned-building-tic-tac-toe" target="_blank" rel="noopener" class="project-link-btn blog-btn"><ion-icon name="document-text-outline"></ion-icon> Blog</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="fun">
+              <div class="project-card">
+                <figure class="project-img">
+                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                  <img src="./assets/images/lovenote_v1.png" alt="Love Note App" loading="lazy" onerror="this.src='./assets/images/project-4.png'">
+                </figure>
+                <h3 class="project-title">Love Note API</h3>
+                <p class="project-category">Fun</p>
+                <p class="project-desc">Simple quote generator built with FastAPI & vanilla JS.</p>
+                <div class="project-links">
+                  <a href="https://github.com/sruthijamm/lovenote-api" target="_blank" rel="noopener" class="project-link-btn"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                  <a href="https://lovenote-api.onrender.com/" target="_blank" rel="noopener" class="project-link-btn demo-btn"><ion-icon name="open-outline"></ion-icon> Demo</a>
+                  <a href="https://sj-portfolio-projects.hashnode.dev/building-love-note-api-web-app" target="_blank" rel="noopener" class="project-link-btn blog-btn"><ion-icon name="document-text-outline"></ion-icon> Blog</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

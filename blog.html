@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Sruthi Jammalamadaka</title>
+  <link rel="shortcut icon" href="./assets/images/sruthi_icon2.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/sruthi_icon2.png" alt="Sruthi Jammalamadaka" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Sruthi Jammalamadaka">Sruthi Jammalamadaka</h1>
+          <p class="title">Software Dev → AI & Data Science</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:sruthijamm@gmail.com" class="contact-link">sruthijamm@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="document"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+              <a href="assets/SruthiJammResume.pdf" class="resume-link" target="_blank">Download My Resume</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Years of Experience</p>
+              <time>2+ Years</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Toronto, Ontario, CA</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/sruthijamm" class="social-link"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/sruthijamm/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="resume.html" class="navbar-link">Resume</a></li>
+          <li class="navbar-item"><a href="projects.html" class="navbar-link">Projects</a></li>
+          <li class="navbar-item"><a href="blog.html" class="navbar-link active">Blogs</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <article class="blog active" data-page="blogs">
+        <header>
+          <h2 class="h2 article-title">Blogs</h2>
+        </header>
+
+        <section class="blog-posts">
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Reflective</button></li>
+            <li class="filter-item"><button data-filter-btn>Technical</button></li>
+            <li class="filter-item"><button data-filter-btn>AI & Data Science</button></li>
+            <li class="filter-item"><button data-filter-btn>Misc</button></li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Reflective</button></li>
+              <li class="select-item"><button data-select-item>Technical</button></li>
+              <li class="select-item"><button data-select-item>AI & Data Science</button></li>
+              <li class="select-item"><button data-select-item>Misc</button></li>
+            </ul>
+          </div>
+
+          <ul class="blog-posts-list">
+            <li class="blog-post-item active" data-filter-item data-category="reflective">
+              <a href="https://medium.com/@sruthijam/starting-over-60269e3a87c9">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Startingover.png" alt="Starting Over" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Reflective</p>
+                    <span class="dot"></span>
+                    <time datetime="2026-02-09">Feb 09, 2026</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Starting Over.</h3>
+                  <p class="blog-text">A personal reset to write, learn, and share my evolving interests across AI, books, health, and creativity.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item active" data-filter-item data-category="reflective">
+              <a href="https://medium.com/@sruthijam/5-things-i-learned-during-covid-af1c5303b5e4">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/COVID.png" alt="5 Things I learned During COVID" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Reflective</p>
+                    <span class="dot"></span>
+                    <time datetime="2022-01-08">Jan 8, 2022</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">5 Things I learned During COVID</h3>
+                  <p class="blog-text">How the pandemic reshaped my perspective on relationships, growth, adaptability, and focusing on the journey over the outcome.</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
